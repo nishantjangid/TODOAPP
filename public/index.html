@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>To-Do List App</title>
+  <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet"/>
+  <!-- <link href="https://cdn.datatables.net/searchbuilder/1.5.0/css/searchBuilder.dataTables.min.css" rel="stylesheet"/> -->
+  <link href="https://cdn.datatables.net/datetime/1.5.1/css/dataTables.dateTime.min.css" rel="stylesheet"/>
+  <style>
+    :root{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+body {
+  padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+      overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.hideDiv{
+  display: none !important;
+}
+
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <form id="taskForm">
+    <input type="text" id="title" placeholder="Title" required>
+    <input type="text" id="description" placeholder="Description" required>
+    <button type="submit">Add Task</button>
+  </form>  
+  <div id="taskDiv" style="display: none;margin: 100px;">
+
+    <div style="width:100%;justify-content: center;">
+      <table  id="tasksTable">
+        <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Created Time</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="tasks">
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <!-- <script src="https://cdn.datatables.net/searchbuilder/1.5.0/js/dataTables.searchBuilder.min.js"></script> -->
+  <script src="https://cdn.datatables.net/datetime/1.5.1/js/dataTables.dateTime.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+//     $(document).ready(function() {
+//     $('#example').DataTable( {
+//         dom: 'Qlfrtip'
+//     });
+// });
+  </script>
+</body>
+</html>
